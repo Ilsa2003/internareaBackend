@@ -47,6 +47,7 @@
 
 const express = require('express');
 const cors = require('cors');
+const router = require('./routes/index');
 const path = require('path');
 const { connect } = require('./db');
 const router = require('./routes/index');
