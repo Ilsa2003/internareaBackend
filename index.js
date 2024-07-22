@@ -89,12 +89,13 @@
 // }).catch(err => {
 //   console.error('Database connection error:', err);
 // });
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const { connect } = require('./db');
 const avatarRoute = require('./routes/avatarRoute');
-const router = require('./routes/index'); // Ensure this file exists and is correctly named
+const router = require('./routes/index');
 const otpRoutes = require('./routes/otpRoutes');
 const dotenv = require('dotenv');
 
@@ -134,3 +135,4 @@ connect().then(() => {
 }).catch(err => {
   console.error('Database connection error:', err);
 });
+
