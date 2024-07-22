@@ -47,12 +47,11 @@
 
 const express = require('express');
 const cors = require('cors');
-const router = require('./routes/index');
 const path = require('path');
 const { connect } = require('./db');
+const avatarRoute = require('./routes/avatarRoute');
 const router = require('./routes/index');
 const otpRoutes = require('./routes/otpRoutes');
-// Load environment variables
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -72,6 +71,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', router); // Main API routes
+app.use('/api/avatar', avatarRoute); // Avatar routes
 app.use('/otp', otpRoutes); // Handle OTP routes
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Serve static files
 
