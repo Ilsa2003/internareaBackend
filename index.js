@@ -2,8 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const { connect } = require('./db');
-// const avatarRoute = require('./routes/avatarRoute');
-const avatarRoute = require(path.resolve(__dirname, 'routes', 'avatarRoute'));
+const avatarRoute = require('./routes/avatarRoute');
 const router = require('./routes/index');
 const otpRoutes = require('./routes/otpRoutes');
 // Load environment variables
