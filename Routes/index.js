@@ -22,7 +22,7 @@
 
 const express = require('express');
 const router = express.Router();
-const ApplicationRoute = require('./applicationRoute');
+const ApplicationRoute = require('./ApplicationRoute');
 const intern = require('./internshipRout');
 const job = require('./jobRoute');
 const admin = require('./admin');
