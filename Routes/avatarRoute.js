@@ -35,15 +35,17 @@ function checkFileType(file, cb) {
 
 // Upload route
 router.post('/upload', (req, res) => {
-    upload(req, res, async (err) => {
+    upload(req, res, (err) => {
         if (err) {
-            console.error(err);
+            console.error('Upload Error:', err);
             res.status(400).json({ mssg: err });
         } else {
             if (req.file === undefined) {
+                console.error('No file selected');
                 res.status(400).json({ mssg: 'No file selected!' });
             } else {
                 const avatarUrl = `uploads/${req.file.filename}`;
+                console.log('File uploaded successfully:', avatarUrl);
                 res.status(200).json({
                     mssg: 'File uploaded!',
                     file: avatarUrl
