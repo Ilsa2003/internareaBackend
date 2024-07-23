@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const EmailVerification = require('../model/EmailVerification');
+const EmailVerification = require('../Model/EmailVerification');
 
 // Nodemailer transporter setup (ensure your .env is configured correctly)
 const transporter = nodemailer.createTransport({

@@ -1,5 +1,5 @@
 // otpController.js
-const Otp = require('../model/Otp');
+const Otp = require('../Model/Otp');
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
